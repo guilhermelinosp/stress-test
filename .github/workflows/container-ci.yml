@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        service: [GATEWAY PRODUCER, CONSUMER]
+        service: [GATEWAY, PRODUCER, CONSUMER]
 
     steps:
       - name: Check out the repo
