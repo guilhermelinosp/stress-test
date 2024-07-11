@@ -11,6 +11,12 @@ var services = builder.Services;
 var configuration = builder.Configuration;
 var web = builder.WebHost;
 
+configuration
+	.SetBasePath(Directory.GetCurrentDirectory())
+	.AddJsonFile("appsettings.json", false, true)
+	.AddUserSecrets<Program>()
+	.Build();
+
 // Configure Kestrel from appsettings.json with validation
 web.ConfigureKestrel((context, serverOptions) =>
 {

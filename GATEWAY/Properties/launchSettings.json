@@ -3,17 +3,14 @@
   "profiles": {
     "Production": {
       "commandName": "Project",
-      "applicationUrl": "http://127.0.0.1:5000;https://127.0.0.1:5001",
-      "sslPort": 5001,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production"
-      }
+      "applicationUrl": "http://127.0.0.1:7700;https://127.0.0.1:7701",
+      "sslPort": 7701
     },
     "Development": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://127.0.0.1:5000",
+      "applicationUrl": "http://127.0.0.1:7700",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

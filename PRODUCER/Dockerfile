@@ -4,13 +4,11 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-RUN dotnet dev-certs https
-WORKDIR /src
+WORKDIR /source
 COPY ["PRODUCER/*.csproj", "PRODUCER/"]
 RUN dotnet restore "PRODUCER/*.csproj"
 COPY . .
-WORKDIR "/src/PRODUCER"
+WORKDIR "/source/PRODUCER"
 RUN dotnet build . -c Release -o /app/build
 
 FROM build AS publish
